@@ -28,4 +28,24 @@ describe("Auth middleware", () => {
     };
     expect(authMiddleware.bind(this, req, {}, () => {})).to.throw();
   });
+
+  it("should throw an error if the token cannot be verified", () => {
+    const req = {
+      get: () => {
+        return "Bearer xyz"; // This will certainly be an incorrect token.
+      },
+    };
+    expect(authMiddleware.bind(this, req, {}, () => {})).to.throw();
+  });
+
+  it("should yield a userId after decoding the token", () => {
+    const req = {
+      get: () => {
+        return "Bearer xyz"; // This will certainly be an incorrect token.
+      },
+    };
+    // Here we are executing the function manually so req can receive a new property
+    authMiddleware(req, {}, () => {});
+    expect(req).to.have.property('userId'); // Checking if req has a property named userId
+  });
 });
