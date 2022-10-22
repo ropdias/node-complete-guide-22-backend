@@ -13,7 +13,7 @@ Section 30 covered:
 - [x] Using Stubs
 - [x] Testing Controllers
 - [x] Testing Asynchronous Code
-- [ ] Setting up a Testing Database
+- [x] Setting up a Testing Database
 - [ ] Testing Code With An Active Database
 - [ ] Cleaning Up
 - [ ] Hooks
