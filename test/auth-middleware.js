@@ -4,9 +4,12 @@ const sinon = require("sinon");
 
 const authMiddleware = require("../middleware/is-auth");
 
-describe("Auth middleware", () => {
+// Obs: Passing arrow functions (aka “lambdas”) to Mocha is discouraged.
+// Lambdas lexically bind this and cannot access the Mocha context.
+
+describe("Auth middleware", function () {
   // describe(); // You could have a describe inside a describe
-  it("should throw an error if no authorization header is present", () => {
+  it("should throw an error if no authorization header is present", function () {
     const req = {
       get: () => {
         return null;
@@ -22,7 +25,7 @@ describe("Auth middleware", () => {
     );
   });
 
-  it("should throw an error if the authorization header is only one string", () => {
+  it("should throw an error if the authorization header is only one string", function () {
     const req = {
       get: () => {
         return "xyz";
@@ -31,7 +34,7 @@ describe("Auth middleware", () => {
     expect(authMiddleware.bind(this, req, {}, () => {})).to.throw();
   });
 
-  it("should yield a userId after decoding the token", () => {
+  it("should yield a userId after decoding the token", function () {
     const req = {
       get: () => {
         return "Bearer xyz"; // This will certainly be an incorrect token.
@@ -59,7 +62,7 @@ describe("Auth middleware", () => {
     jwt.verify.restore();
   });
 
-  it("should throw an error if the token cannot be verified", () => {
+  it("should throw an error if the token cannot be verified", function () {
     const req = {
       get: () => {
         return "Bearer xyz"; // This will certainly be an incorrect token.

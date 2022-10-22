@@ -59,7 +59,13 @@ exports.login = async (req, res, next) => {
       { expiresIn: "1h" } // Here we stablish the token will expire and be invalid in 1hour
     );
     res.status(200).json({ token: token, userId: loadedUser._id.toString() });
+    return;
   } catch (err) {
+    // I just added this here again to test the statusCode
+    if (!err.statusCode) {
+      err.statusCode = 500;
+    }
     next(err);
+    return err;
   }
 };

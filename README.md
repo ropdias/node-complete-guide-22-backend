@@ -12,7 +12,7 @@ Section 30 covered:
 - [x] What Not To Test!
 - [x] Using Stubs
 - [x] Testing Controllers
-- [ ] Testing Asynchronous Code
+- [x] Testing Asynchronous Code
 - [ ] Setting up a Testing Database
 - [ ] Testing Code With An Active Database
 - [ ] Cleaning Up
