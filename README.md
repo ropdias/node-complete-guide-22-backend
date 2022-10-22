@@ -10,7 +10,7 @@ Section 30 covered:
 - [x] Testing the Auth Middleware
 - [x] Organizing Multiple Tests
 - [x] What Not To Test!
-- [ ] Using Stubs
+- [x] Using Stubs
 - [ ] Testing Controllers
 - [ ] Testing Asynchronous Code
 - [ ] Setting up a Testing Database
