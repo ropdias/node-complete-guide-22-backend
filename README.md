@@ -11,7 +11,7 @@ Section 30 covered:
 - [x] Organizing Multiple Tests
 - [x] What Not To Test!
 - [x] Using Stubs
-- [ ] Testing Controllers
+- [x] Testing Controllers
 - [ ] Testing Asynchronous Code
 - [ ] Setting up a Testing Database
 - [ ] Testing Code With An Active Database
