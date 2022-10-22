@@ -8,7 +8,7 @@ Section 30 covered:
 - [x] Why & How?
 - [x] Setup and Writing a First Test
 - [x] Testing the Auth Middleware
-- [ ] Organizing Multiple Tests
+- [x] Organizing Multiple Tests
 - [ ] What Not To Test!
 - [ ] Using Stubs
 - [ ] Testing Controllers

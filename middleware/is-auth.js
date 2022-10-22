@@ -7,7 +7,7 @@ module.exports = (req, res, next) => {
     error.statusCode = 401;
     throw error;
   }
-  const token = authHeader.split(" ")[1];
+  const token = authHeader.split(" ")[1]; // Bearer token-here
   let decodedToken;
   try {
     // There is a jwt.decode() that only decode
