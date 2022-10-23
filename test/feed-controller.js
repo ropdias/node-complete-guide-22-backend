@@ -38,6 +38,8 @@ describe("Feed Controller - User Status", function () {
     // getUserStatus is an async function and implicitly returns a promise
     await FeedController.getUserStatus(req, res, () => {});
     expect(res.statusCode).to.be.equal(200);
-    expect(res.userStatus).to.be.equal("I am new!!");
+    expect(res.userStatus).to.be.equal("I am new!");
+    await User.deleteMany({}); // Cleaning the data we saved in the database so we can test again later
+    await mongoose.disconnect(); // Disconnecting from the database
   });
 });

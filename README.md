@@ -15,7 +15,7 @@ Section 30 covered:
 - [x] Testing Asynchronous Code
 - [x] Setting up a Testing Database
 - [x] Testing Code With An Active Database
-- [ ] Cleaning Up
+- [x] Cleaning Up
 - [ ] Hooks
 - [ ] Testing Code That Requires Authentication
 
