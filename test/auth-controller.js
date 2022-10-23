@@ -26,6 +26,7 @@ describe("Auth Controller - Login", function () {
     // and does not wait for a promise to resolve no matter how fast your async code is.
     // To handle this you should add the "done" argument or transform the function passed to
     // it() in async and use await
+    // login is an async function and implicitly returns a promise
     AuthController.login(req, {}, () => {})
       .then((result) => {
         expect(result).to.be.an("error");
