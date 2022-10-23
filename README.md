@@ -16,7 +16,7 @@ Section 30 covered:
 - [x] Setting up a Testing Database
 - [x] Testing Code With An Active Database
 - [x] Cleaning Up
-- [ ] Hooks
+- [x] Hooks
 - [ ] Testing Code That Requires Authentication
 
 
