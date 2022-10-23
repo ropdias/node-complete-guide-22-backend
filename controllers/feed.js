@@ -65,7 +65,7 @@ exports.createPost = async (req, res, next) => {
     const createdPost = await post.save();
 
     user.posts.push(createdPost); // Here mongoose will do all the heavy lifting of pulling out the post ID and adding that to the user actually
-    await user.save();
+    const savedUser = await user.save();
 
     res.status(201).json({
       // 201 Created
@@ -76,6 +76,7 @@ exports.createPost = async (req, res, next) => {
       },
       // creator: { _id: user._id, name: user.name },
     });
+    return savedUser; // returning savedUser to test this controller
   } catch (err) {
     next(err);
   }

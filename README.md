@@ -17,7 +17,7 @@ Section 30 covered:
 - [x] Testing Code With An Active Database
 - [x] Cleaning Up
 - [x] Hooks
-- [ ] Testing Code That Requires Authentication
+- [x] Testing Code That Requires Authentication
 
 
 More info: https://www.udemy.com/course/nodejs-the-complete-guide/
